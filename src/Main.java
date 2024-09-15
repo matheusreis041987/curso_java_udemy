@@ -10,6 +10,8 @@ public class Main {
 		String nome = "Maria";
 		int idade = 31;
 		double renda = 4000.0;
+		String produto = "Computador";
+		double preco = 2100.0;
 		
 		System.out.println("Hello Word");
 		System.out.println(letra);
@@ -28,8 +30,9 @@ public class Main {
 		System.out.printf("RESULTADO = %.3f METROS%n",x);
 		// representação das variáveis no printf s d f
 		System.out.printf("%s tem %d anos e possui uma renda de R$ %.2f%n",nome,idade, renda);
-		
-		
+		System.out.printf("%s com o preço de R$ %.2f%n",produto,preco);
+		Locale.setDefault(new Locale("pt", "BR"));
+		System.out.printf("%.3f%n", s);
 	}
 
 }
