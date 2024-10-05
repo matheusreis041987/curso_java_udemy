@@ -16,7 +16,7 @@ public class ConverterCelsiusFahrenheit {
 			double c = sc.nextDouble();
 			double f = 9.0 * c / 5.0 + 32.0;
 			System.out.printf("Equivalente em Fahrenheit: %.1f%n",f);
-			System.out.print("Você deseja repeti (s/n)?");
+			System.out.print("Você deseja repetir (s/n)?");
 			resp = sc.next().charAt(0);
 		} while (resp != 'n');
 	

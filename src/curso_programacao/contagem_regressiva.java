@@ -8,7 +8,7 @@ public class contagem_regressiva {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Digite o número iniical");
+		System.out.println("Digite o número inical");
 		
 		int n = sc.nextInt();
 		
