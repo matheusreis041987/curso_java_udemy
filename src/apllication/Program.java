@@ -30,9 +30,9 @@ public class Program {
 		System.out.printf("Área do triângulo X: %.4f%n", areaY);
 		
 		if(areaX > areaY) {
-			System.out.println("Maior área: X");
+			System.out.println("Maior área: X ");
 		}else {
-			System.out.println("Maior área: Y");
+			System.out.println("Maior área: Y ");
 		}
 		
 		sc.close();
