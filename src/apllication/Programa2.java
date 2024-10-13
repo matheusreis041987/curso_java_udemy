@@ -38,6 +38,9 @@ public class Programa2 {
 		aY.imprimirArea();
 		
 		MaiorArea m = new MaiorArea(aX, aY);
+		
+		
+		sc.close();
 
 	}
 
