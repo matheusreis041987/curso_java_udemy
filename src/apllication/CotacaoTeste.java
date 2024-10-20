@@ -1,6 +1,6 @@
 package apllication;
 
-import Uil.Cotacao;
+import Util.Cotacao;
 
 public class CotacaoTeste {
 

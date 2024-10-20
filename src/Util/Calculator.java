@@ -1,4 +1,4 @@
-package Uil;
+package Util;
 
 public class Calculator {
 	

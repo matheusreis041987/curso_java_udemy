@@ -3,7 +3,7 @@ package apllication;
 import java.util.Locale;
 import java.util.Scanner;
 
-import Uil.Calculator;
+import Util.Calculator;
 
 public class EsferaTeste {
 
