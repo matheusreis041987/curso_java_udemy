@@ -7,6 +7,30 @@ public class Produto {
 	private int quantity;
 	
 	
+	public Produto (String name, double price, int quantity) {
+		
+		if(price >= 0 || quantity >= 0) {
+			this.name = name;
+			this.price = price;
+			this.quantity = quantity;
+		} else {
+			this.name = name;
+			price = 0;
+			this.price = price;
+			quantity = 0;
+			this.quantity = quantity;
+		}
+		
+
+		
+	}
+	
+	public Produto(String name, double price) {
+		this.name = name;
+		this.price = price;
+		
+	}
+	
 	public String getName() {
 		return name;
 	}

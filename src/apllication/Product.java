@@ -5,29 +5,29 @@ import java.util.Scanner;
 
 import Entidade.Produto;
 
-public class Programa3 {
+public class Product {
 
 	public static void main(String[] args) {
 		
-		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		
-		Produto produto = new Produto();
-		
+
+	
+
 		System.out.println("Entre com os dados do produto:");
-		System.out.print("Nome: ");	
-		produto.setName(sc.nextLine());
+		System.out.print("Nome: ");
+		String name = sc.nextLine();
 		System.out.print("Preço: ");
-		produto.setPrice(sc.nextDouble());
+		double price = sc.nextDouble();
 		System.out.print("Quantidade: ");
-		produto.setQuantity(sc.nextInt());
-		
+		int quantity = sc.nextInt();
+
+		Produto produto = new Produto(name, price, quantity);
 		
 		produto.toString();
-		
+
 		System.out.println();
-		System.out.println("Product data: "+ produto);
+		System.out.println("Product data: " + produto);
 		System.out.println();
 		System.out.print("Entre com o número de produtos a ser adicionado ao estoque:");
 		int quantidade = sc.nextInt();
@@ -37,7 +37,7 @@ public class Programa3 {
 		quantidade = sc.nextInt();
 		produto.removeProduct(quantidade);
 		System.out.println("Update data: " + produto);
-		
+
 		sc.close();
 		
 		

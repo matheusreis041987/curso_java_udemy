@@ -9,6 +9,7 @@ public class CotacaoTeste {
 		
 		Cotacao.verCotacao();
 
+	
 	}
 
 }
