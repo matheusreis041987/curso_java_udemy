@@ -1,6 +1,11 @@
 package Entidade;
 
-public class Produto {
+import java.util.ArrayList;
+import java.util.List;
+
+public  class Produto {
+	
+	private static List<Produto> lista = new ArrayList<Produto>();
 
 	private String name;
 	private double price;
@@ -21,6 +26,7 @@ public class Produto {
 			this.quantity = quantity;
 		}
 		
+		lista.add(this);
 
 		
 	}
@@ -73,6 +79,14 @@ public class Produto {
 		+ quantity + " units" + ", Total: $ " 
 		+ String.format("%.2f", totalValueInStock()) ;
 		
+		
+	}
+	
+	public static void imprimirListaProdutos() {
+	System.out.println("LISTA DE PRODUTOS:");
+	for (Produto i : Produto.lista) {
+		System.out.println("Produto: " + i.name + " | Quantidade: " + i.quantity + " | Preço: " + i.price);
+		}
 		
 	}
 	
