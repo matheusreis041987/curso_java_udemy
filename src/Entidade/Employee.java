@@ -77,7 +77,7 @@ public class Employee {
 					
 		for (Employee en : list) {
 			if (idIncrease == en.id) {
-				en.salary = en.salary * (1 + percent);
+				en.salary = en.salary * (1 + (percent / 100));
 			} else {
 				System.out.println("Id not found");
 			}
