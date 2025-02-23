@@ -3,6 +3,7 @@ package apllication;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class DatasEHoras {
@@ -42,17 +43,38 @@ public class DatasEHoras {
 		System.out.println("d09 = " +d10);
 		System.out.println("d09 = " +d11);
 		System.out.println("d09 = " +d12);
-		System.out.println("*******************************************");
+		System.out.println("*************CONVERTER DATA PARA TEXTO************************************");
 		
 		LocalDate d13 = LocalDate.parse("2022-07-20");
 		LocalDateTime d14 = LocalDateTime.parse("2022-07-20T01:30:26");
 		Instant d15 = Instant.parse("2022-07-20T01:30:26Z");
 		
 		DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		
+		DateTimeFormatter fmt4 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		DateTimeFormatter fmt5 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault()); // ZoneId.systemDefault() pega o fuso horário do computador/servidor que está rodando a aplicação
+		DateTimeFormatter fmt6 = DateTimeFormatter.ISO_DATE_TIME; // data local sem fuso horário
+		DateTimeFormatter fmt7 = DateTimeFormatter.ISO_INSTANT;// vai usar por padrão o UTC
 		
 		System.out.println("d13 = " + d13.format(fmt3)); 
 		System.out.println("d13 = " + fmt3.format(d13) );
+		System.out.println("d13 = " + d13.format(DateTimeFormatter.ofPattern("dd / MM / yyyy"))); 
+		System.out.println("d14 = " + d14.format(fmt3)); // só dia, mês e ano
+		System.out.println("d14 = " + d14.format(fmt4)); // completo
+		System.out.println("d15: " + fmt5.format(d15));
+		System.out.println("d14 = " + d14.format(fmt6));
+		System.out.println("d15 = " + fmt7.format(d15));
+		System.out.println("******************CONVERTER DATA LOCAL PARA GLOBAL*************************");
+		
+		LocalDate d16 = LocalDate.parse("2022-07-20");
+		LocalDateTime d17 = LocalDateTime.parse("2022-07-20T01:30:26");
+		Instant d18 = Instant.parse("2022-07-20T01:30:26Z");
+		
+		//for (String s: ZoneId.getAvailableZoneIds()){ // ZoneId.getAvailableZoneIds() --> representa uma coleção de elementos
+		//	System.out.println(s); // nome de todos os fuso horários 
+		//}
+		
+		LocalDate r1 = LocalDate.ofInstant(d18, ZoneId.of("Portugal")); // usando uma data global para gerar uma data local considerando a fuso horário da minha máquina 
+		System.out.println(r1);
 		
 	}
 
